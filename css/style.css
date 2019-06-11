@@ -1,0 +1,355 @@
+*, *:after, *:before {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 18px;
+    width: 1920px;
+}
+@media screen and (max-width: 1440px){
+    html{
+        font-size: 16px;
+    }
+}
+@media screen and (max-width: 1024px){
+    html{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 480px){
+    html{
+        font-size: 12px;
+    }
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.5;
+    color: #444444;
+}
+.wrapper{
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+    /* overflow: hidden; */
+}
+.section{
+    width: 1920px;
+    padding: 0 265px;
+    margin-bottom: 250px;
+}
+
+/*-------------------COMMON------------------*/
+.img-w{
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+}
+.img-h{
+    max-height: 100%;
+    height: 100%;
+    width: auto;
+}
+.headers{
+    margin-bottom: 100px;
+    text-align: center;
+}
+.header{
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    margin-bottom: 0;
+    font-family: 'Dancing Script', cursive;
+    font-weight: 700;
+}
+.subheader{
+    font-size: 1rem;
+    font-style: italic;
+    font-weight: 400;
+}
+.nav__item{
+    text-align: center;
+    padding: 10px 0;
+    font-weight: 500;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.btn{
+    padding: 15px 50px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: 700;
+    border: 2px solid #E32436;
+    display: inline-block;
+    cursor: pointer;
+}
+.btn--primary{
+    background-color: #E32436;
+    color: #fff;
+    transition: 0.25s;
+}
+.btn--primary:hover{
+    background-color: rgb(204, 34, 51);
+    color: #fff;
+    transition: 0.25s;
+}
+.btn--secondary{
+    background-color: transparent;
+    color: #E32436;
+    transition: 0.25s;
+}
+.btn--secondary:hover{
+    background-color: rgb(204, 34, 51);
+    color: #fff;
+    transition: 0.25s;
+}
+.wrapper{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+/*-----------------COMMON end----------------*/
+/*-------------------TOP-MENU------------------*/
+.wrapper--top-menu{
+    padding: 0;
+}
+.section--top-menu{
+    margin-bottom: 100px;
+    position: fixed;
+    width: 1920px;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background-color: #fff;
+}
+.top-menu{
+    padding: 10px 0;
+}
+.nav__item{
+    position: relative;
+    transition: 0.5s;
+}
+.nav__item:before{
+    content: "";
+    position: absolute;
+    transition: 0.5s;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 2px;
+    background-color: #EB2937;
+    opacity: 0;
+}
+.nav__item:hover:before{
+    width: 80%;
+    transition: 0.5s;
+    opacity: 1;
+}
+/*-----------------TOP-MENU end----------------*/
+/*--------------------HERO---------------------*/
+.section--hero{
+    padding-top: 180px;
+    padding-bottom: 80px;
+    margin-bottom: 180px;
+    overflow: hidden;
+}
+.header--hero{
+    font-size: 5rem;
+    line-height: 1;
+}
+.hero__image{
+    position: relative;
+    border-radius: 20px;
+}
+.hero__image:before{
+    content: "";
+    position: absolute;
+    height: 130%;
+    width: 1000px;
+    top: 50%;
+    right: -75%;
+    border-radius: 20px;
+    transform: translateY(-50%);
+    z-index: -1;
+    background-color: #EB2937;
+}
+/*-------------------HERO end-------------------*/
+/*---------------------ABOUT--------------------*/
+.about__photo{
+    border-radius: 20px;
+    overflow: hidden;
+}
+/*-------------------ABOUT end------------------*/
+/*--------------------MEMBERS-------------------*/
+.section--members{
+    margin-bottom: 0px;
+    overflow: hidden;
+}
+.members{
+    position: relative;
+}
+.members:before{
+    content: "";
+    position: absolute;
+    width: 5000px;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translateY(-52.5%) translateX(-50%) rotate(2deg);
+    background-color: #EB2937;
+}
+.member{
+    box-shadow: 0px 3px 15px 5px rgba(104, 104, 104, 0.15);
+    margin-bottom: 60px;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: 0.25s;
+}
+.member:hover{
+    box-shadow: 0px 3px 15px 5px rgba(104, 104, 104, 0.25);
+    transition: 0.25s;
+}
+.member__photo{
+    height: 280px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.member__link{
+    display: block;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: rgba(255, 37, 37, 0.75);
+    opacity: 0;
+    transition: 0.5s;
+}
+.member:hover .member__link{
+    cursor: pointer;
+    opacity: 1;
+    transition: 0.5s;
+}
+.member__link:after{
+    content: "";
+    height: 50%;
+    width: 50%;
+    background-color: transparent;
+    background-image: url(../img/skype.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+.member__about{
+    padding: 30px;
+    text-align: center;
+}
+.member__header{
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+.member__text{
+    /* font-size: 0.875rem; */
+    line-height: 1.6875;
+    margin-bottom: 10px;
+}
+.section--other-members{
+    text-align: center;
+}
+.other-members{
+    height: auto;
+    opacity: 1;
+    transition: 0.5s;
+}
+.other-members.hidden{
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: 0.5s;
+}
+/*-------------------MEMBERS end------------------*/
+/*---------------------PRICING--------------------*/
+.price{
+    background: #FFFFFF;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    padding: 20px 40px 40px 40px;
+    text-align: center;
+    transition: 0.25s;
+}
+.price:hover{
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+    transition: 0.25s;
+}
+.price.active{
+    border: 1px solid #E32436;
+}
+.price__name{
+    font-size: 2rem;
+    line-height: 1.5;
+    font-weight: 700;
+    text-align: center;
+}
+.price__inner{
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    margin-bottom: 25px;
+}
+.price__price{
+    font-size: 3rem;
+    line-height: 1.5;
+    color: #E32436;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.services{
+    list-style: none;
+    padding: 0 25px;
+    margin-bottom: 18px;
+    text-align: left;
+}
+.service{
+    font-size: 1.25rem;
+    line-height: 1.5;
+    font-weight: 500;
+}
+.price__change{
+    display: inline-block;
+    color: #E32436;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 1;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+/*-------------------PRICING end------------------*/
+/*---------------------FOOTER---------------------*/
+.footer{
+    padding: 60px 150px 100px 150px;
+    background-color: #E32436;
+    color: #fff;
+    text-align: center;
+}
+.header--footer{
+    margin-bottom: 75px;
+    font-size: 2rem;
+    line-height: 1;
+    font-weight: 700;
+}
+.contact__name{
+    font-size: 1.25rem;
+    line-height: 1.5;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+/*--------------------FOOTER end------------------*/
